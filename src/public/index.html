@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chat</title>
+        <link rel="stylesheet" href="./css/index.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h2 class="title">Welcome to simple Chat)</h2>
+            </header>
+            <main>
+                <form id="join_chat_form" action='./chat.html' method="GET">
+                    <input type="text" name="user_name" id="username" required autocomplete="off" />
+                    <select id="chat_room" name="room">
+                        <option value="General">General</option>
+                        <option value="Work">Work</option>
+                        <option value="Planning Holidays">Holidays</option>
+                        <option value="Health">Health</option>
+                        <option value="Technology">Technology</option>
+                    </select>
+                    <input type="submit" class="button" value="Join"></submit>
+                </form>
+            </main>
+        </div>
+    </body>
+</html>
