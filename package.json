@@ -4,7 +4,9 @@
     "description": "chat app based on Socker.io, Node, Express",
     "main": "index.js",
     "scripts": {
-        "dev": "nodemon"
+        "dev": "nodemon",
+        "build": "rimraf ./build && tsc",
+        "start": "npm run build && node build/index.js"
     },
     "author": "AndriiShpyra",
     "license": "ISC",

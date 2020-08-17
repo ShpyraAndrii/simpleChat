@@ -12,7 +12,7 @@ const io = socketio(server);
 const admin = 'Admin';
 
 // Set static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 io.on('connect', (socket: any) => {
     socket.on('join_room', ({ user_name, room }: { user_name: string; room: string }) => {
@@ -55,5 +55,6 @@ io.on('connect', (socket: any) => {
 });
 
 const PORT = process.env.PORT || 3000;
+const HOST = '0.0.0.0';
 
-server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+server.listen(PORT, HOST, () => console.log(`Server is running on port http://${HOST}${PORT}`));
